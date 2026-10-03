@@ -34,8 +34,7 @@ PUMix/
 │   ├── networks/
 │   └── utils/
 ├── data/
-├── data_split/
-└── checkpoints/
+
 ```
 
 ---

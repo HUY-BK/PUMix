@@ -10,8 +10,6 @@ venv/
 data/ACDC/
 data/Synapse/
 outputs/
-checkpoints/*.pth
-checkpoints/*.pt
 *.pth
 *.pt
 
