@@ -128,8 +128,6 @@ Experimental settings:
 - **5% labeled:** 3 labeled patients
 - **10% labeled:** 7 labeled patients
 
-> **Protocol note:** To remain consistent with the original implementation, `test.list` is used for epoch-level evaluation and model selection during ACDC training.
-
 ### Synapse
 
 Expected structure:
