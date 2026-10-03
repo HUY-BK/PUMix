@@ -1,0 +1,8 @@
+numpy>=2.0.2,<2.5
+scipy>=1.11
+h5py>=3.10
+opencv-python-headless>=4.9
+albumentations==2.0.8
+medpy==0.5.2
+PyYAML>=6.0
+tqdm>=4.66

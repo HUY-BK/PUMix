@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+.env
+.venv/
+venv/
+
+# Datasets and training artifacts
+data/ACDC/
+data/Synapse/
+outputs/
+checkpoints/*.pth
+checkpoints/*.pt
+*.pth
+*.pt
+
+# IDE
+.vscode/
+.idea/
+.pytest_cache/
+__pycache__/
+*.pyc
