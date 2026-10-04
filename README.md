@@ -8,7 +8,7 @@ PUMix is a Mean Teacher-based semi-supervised segmentation framework that improv
 
 It contains three main components:
 
-- **AUPM** — Asymmetric Uncertainty-guided Patch Mixing.
+- **AUPM** — Asymmetric Uncertainty-guided PatchMix.
 - **MSPR** — Multi-Scale Prototype Representation.
 - **SPCL** — Structure-aware Prototype Contrastive Learning.
 
