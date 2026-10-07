@@ -39,59 +39,6 @@ PUMix/
 
 ---
 
-## Installation
-
-The original experiments were conducted on an NVIDIA Tesla T4 GPU.
-
-The released implementation is compatible with PyTorch 2.6–2.10. For GPU training, install a CUDA-enabled PyTorch build appropriate for your system before installing the remaining dependencies.
-
-### Linux
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-
-python -m pip install --upgrade pip
-
-pip install torch==2.8.0 torchvision==0.23.0 \
-    --index-url https://download.pytorch.org/whl/cu126
-
-pip install -r requirements.txt
-```
-
-### Windows PowerShell
-
-```powershell
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-
-python -m pip install --upgrade pip
-
-pip install torch==2.8.0 torchvision==0.23.0 `
-    --index-url https://download.pytorch.org/whl/cu126
-
-pip install -r requirements.txt
-```
-
-Verify the installation:
-
-```bash
-python -c "import torch; print('Torch:', torch.__version__); print('CUDA:', torch.cuda.is_available()); print('CUDA build:', torch.version.cuda); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU')"
-```
-
-Expected output for the recommended setup is similar to:
-
-```text
-Torch: 2.8.0+cu126
-CUDA: True
-CUDA build: 12.6
-GPU: NVIDIA ...
-```
-
-> **Note:** If CUDA is not available, install another CUDA-enabled PyTorch build compatible with your local NVIDIA driver and GPU.
-
----
-
 ## Datasets
 
 Experiments are conducted on the **ACDC** and **Synapse** datasets.
@@ -151,6 +98,63 @@ Experimental settings:
 - **50% labeled:** 9 labeled scans
 
 ---
+
+
+## Installation
+
+The original experiments were conducted on an NVIDIA Tesla T4 GPU.
+
+Requirements:
+- Python >= 3.10
+- PyTorch >= 2.6
+- CUDA-enabled NVIDIA GPU is recommended for training
+
+Create a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+Activate the environment:
+```bash
+# Linux / macOS
+source .venv/bin/activate
+```
+```bash
+# Windows PowerShell
+.\.venv\Scripts\Activate.ps1
+```
+Install PyTorch and torchvision with CUDA 12.8 support:
+
+```bash
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+```
+
+Then install the remaining dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Verify the installation:
+
+```bash
+python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA:', torch.cuda.is_available()); print('CUDA build:', torch.version.cuda); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU')"
+```
+
+A successful CUDA-enabled installation should produce output similar to:
+
+```text
+PyTorch: 2.x.x+cu128
+CUDA: True
+CUDA build: 12.8
+GPU: NVIDIA ...
+```
+
+> **Note:** If the CUDA 12.8 build is not suitable for your system, install another CUDA-enabled PyTorch build compatible with your NVIDIA driver and GPU.
+
+---
+
 
 ## Training
 
